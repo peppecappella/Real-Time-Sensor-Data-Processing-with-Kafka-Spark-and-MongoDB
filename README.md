@@ -1,4 +1,4 @@
-# Sensor-Data-Real-Time-ETL-Processing-with-Kafka-Spark-and-MongoDB
+# Sensor Data Real-Time ETL Processing with Kafka Spark and MongoDB
 
 Author: Giuseppe Cappella
 
