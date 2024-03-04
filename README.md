@@ -120,17 +120,26 @@ Open a jupyter notebook on the main folder and execute in this order:
 4) pipeline_2.ipynb
 5) dashboard.ipynb
 
-## Project Results
+## Project Results ##
 
-The application designed in this project showcases several significant results from its capability to handle and process real-time data from bike-sharing stations.
+A first result of the project is the creation and continuous update of three mongo collections:
+
+1) The "sensor_data" collection contains raw information on the status of bike sharing stations updated with a latency of one second.
+2) The "archived hourly departures" collection contains the estimated count of the number of hourly departures from the stations.
+3) The "archived hourly departures per station" collection contains information from the archived hourly departures collection aggregated by station and date.
+
+**Here is a preview of the mongo collections created (one can run the scripts and visualize the collection using native mongo or a MongoDB Compass application, username:admin, password:secret):**
+
+
+<img width="1391" alt="Schermata 2024-03-04 alle 02 10 17" src="https://github.com/peppecappella/Sensor-Data-Real-Time-ETL-Processing-with-Kafka-Spark-and-MongoDB/assets/124899610/d3a8029a-afbb-4053-9f5b-99210edd1a06">
 
 **Continuous Data Collection:**
 
 A core feature of the system is its continuous data collection mechanism. The application remains active, gathering data from bike-sharing stations until explicitly stopped by the user. This persistent operation allows for the accumulation of a rich dataset over time, providing valuable insights into usage patterns and station activity.
 
-**Historical Data Series Creation**
+**Use Cases:**
 
-One of the key outcomes of the project is the creation of an aggregated historical data series. This dataset is organized by departure station and date, detailing the number of departures from each bike-sharing station. Such a comprehensive data series serves as a foundational resource for various analytical and predictive tasks. Future applications of this dataset could include:
+Such a comprehensive data series serves as a foundational resource for various analytical and predictive tasks. Future applications of this dataset could include:
 
 - Regression Models Development: Leveraging the historical data to predict future bike-sharing usage patterns, helping in resource allocation and station management.
 
@@ -138,16 +147,9 @@ One of the key outcomes of the project is the creation of an aggregated historic
 
 - Further Aggregation for Advanced Analyses: The dataset can be enriched with additional data sources, such as traffic patterns or public events, to explore broader mobility trends and behaviors.
 
-
-**Here is a preview of the mongo collections created (one can run the scripts and visualize the collection using native mongo or a MongoDB Compass application, username:admin, password:secret):**
-
-
-<img width="1391" alt="Schermata 2024-03-04 alle 02 10 17" src="https://github.com/peppecappella/Sensor-Data-Real-Time-ETL-Processing-with-Kafka-Spark-and-MongoDB/assets/124899610/d3a8029a-afbb-4053-9f5b-99210edd1a06">
-
-
 **Real-Time Data Visualization Dashboard**
 
-Another significant result of the project is the development of an interactive dashboard. This dashboard provides real-time updates and detailed insights into the bike-sharing usage, showcasing:
+Another result of the project is the development of an interactive dashboard. This dashboard provides real-time updates and detailed insights into the bike-sharing usage, showcasing:
 
 - A bar chart showcasing the top 20 stations by changes in the number of available bicycles, giving a clear view of fluctuations in bicycle availability.
 
