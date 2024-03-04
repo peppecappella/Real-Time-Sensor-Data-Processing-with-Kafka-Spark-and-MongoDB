@@ -4,6 +4,14 @@ Author: Giuseppe Cappella
 
 This project aims to capture, process, and visualize in real-time sensor data coming from bike-sharing stations. Using an architecture based on Kafka, Spark, and MongoDB, the system is designed to handle real-time data streams, enrich them with contextual information, and aggregate them for analysis and visualization through interactive dashboards.
 
+## Data Source 
+
+The data source for this project is the API provided by Capital Bikeshare, a leading bike-sharing service that operates in the Washington D.C. metropolitan area, including parts of Maryland and Virginia.
+
+Capital Bikeshare was launched in 2010 and has since experienced rapid growth. Today, it boasts thousands of bicycles and hundreds of bike-sharing stations across the region. This expansive network serves as an invaluable resource for our project, offering real-time access to comprehensive data on bike-sharing usage, station activity, and bicycle availability.
+
+For more information and to explore Capital Bikeshare further, follow this to their website: [Capital Bikeshare](https://capitalbikeshare.com/system-data).
+
 ## Data Flow and Processing
 
 The data flow consists of 4 principal steps:
@@ -110,7 +118,7 @@ Open a jupyter notebook on the main folder and execute in this order:
 2) consumer.ipynb
 3) pipeline_1.ipynb
 4) pipeline_2.ipynb
-5) pipeline_3.ipynb
+5) dashboard.ipynb
 
 ## Project Results
 
@@ -130,17 +138,24 @@ One of the key outcomes of the project is the creation of an aggregated historic
 
 - Further Aggregation for Advanced Analyses: The dataset can be enriched with additional data sources, such as traffic patterns or public events, to explore broader mobility trends and behaviors.
 
+
+**Here is a preview of the mongo collections created (one can run the scripts and visualize the collection using native mongo or a MongoDB Compass application, username:admin, password:secret):**
+
+
+<img width="1391" alt="Schermata 2024-03-04 alle 02 10 17" src="https://github.com/peppecappella/Sensor-Data-Real-Time-ETL-Processing-with-Kafka-Spark-and-MongoDB/assets/124899610/d3a8029a-afbb-4053-9f5b-99210edd1a06">
+
+
 **Real-Time Data Visualization Dashboard**
 
 Another significant result of the project is the development of an interactive dashboard. This dashboard provides real-time updates and detailed insights into the bike-sharing usage, showcasing:
 
-- Usage Trends: Visual representations of how bike-sharing stations are utilized over different times of the day, days of the week, or other relevant time frames.
+- A bar chart showcasing the top 20 stations by changes in the number of available bicycles, giving a clear view of fluctuations in bicycle availability.
 
-- Station Activity: Aggregated data on the number of departures from each station, highlighting the most and least popular stations.
+- A pie chart representing the top 20 stations by total number of departures, offering a snapshot of service usage intensity.
 
-- Dynamic Updates: The ability to refresh data in real-time, offering an up-to-date view of the bike-sharing ecosystem.
+- A line chart depicting hourly departures from the top 20 stations over the last available day, allowing observation of usage trends throughout the day.
 
-### Here is a preview of the final dashboard:
+**Here is a preview of the final dashboard:**
 
 
 ![dashhh](https://github.com/peppecappella/Sensor-Data-Real-Time-ETL-Processing-with-Kafka-Spark-and-MongoDB/assets/124899610/1fcd727c-dd9e-4a1f-9433-1e3ec70880ba)
